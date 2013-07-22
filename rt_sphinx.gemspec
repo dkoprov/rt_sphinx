@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Dmitry Koprov']
   s.email       = ['dmitry.koprov@gmail.com']
-  s.homepage    = 'http://dkoprov.github.com/rt_sphinx/'
+  s.homepage    = 'http://github.com/dkoprov/rt_sphinx/'
   s.summary     = %q{A tool to work with Sphinx search real time indexes}
   s.description = %q{A tool for populating Sphinx search service through real time indexes.}
 
