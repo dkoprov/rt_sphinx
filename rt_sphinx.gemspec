@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name        = 'rt_sphinx'
   s.version     = '0.0.1'
   s.platform    = Gem::Platform::RUBY
+  s.license     = 'MIT'
   s.authors     = ['Dmitry Koprov']
   s.email       = ['dmitry.koprov@gmail.com']
   s.homepage    = 'http://github.com/dkoprov/rt_sphinx/'
