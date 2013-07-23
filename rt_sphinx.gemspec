@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'rt_sphinx'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.platform    = Gem::Platform::RUBY
   s.license     = 'MIT'
   s.authors     = ['Dmitry Koprov']
@@ -22,4 +22,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake',   '>= 0.9.2'
   s.add_development_dependency 'rspec',  '>= 2.5.0'
   s.add_development_dependency 'yard',   '>= 0.7.2'
+  s.add_development_dependency 'connection_pool'
+  if RUBY_PLATFORM == 'java'
+    s.add_development_dependency 'jdbc-mysql', '5.1.13'
+  else
+    s.add_development_dependency 'mysql2', '0.3.2'
+  end
 end
