@@ -32,7 +32,6 @@ module RtSphinx
     end
 
     def execute_sql(sql, mode)
-      puts sql
       res = {}
       @pool.with do |connection|
         if RUBY_PLATFORM =~ /java/
@@ -45,7 +44,7 @@ module RtSphinx
                 end
           st.close
         else
-          res = connection.query(insert_sql)
+          res = connection.query(sql)
         end
       end
 
