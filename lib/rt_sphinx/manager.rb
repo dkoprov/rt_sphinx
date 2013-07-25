@@ -3,9 +3,8 @@
 module RtSphinx
   class Manager
     def self.start
-      conf_file_path = File.join(File.expand_path('../../..', __FILE__), 'sphinx.conf')
       kill_daemon_if_needed
-      puts `searchd --config #{conf_file_path}`
+      puts `searchd`
     end
 
     def self.kill_daemon_if_needed
