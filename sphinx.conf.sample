@@ -1,7 +1,7 @@
 index rt_logs
 {
   type = rt
-  path = /usr/local/var/data/rt_logs
+  path = /var/lib/sphinxsearch/data/rt_logs
   charset_type = utf-8
   min_word_len = 1
   html_strip   = 1
@@ -18,13 +18,13 @@ index rt_logs
 searchd
 {
   listen = 127.0.0.1:9327:mysql41
-  pid_file = /usr/local/var/data/searchd.pid
+  pid_file = /var/run/searchd_rt.pid
   max_children = 30
   max_matches = 1000
-  log = /usr/local/var/data/searchd.log
-  query_log = /usr/local/var/data/query.log
+  log = /var/lib/sphinxsearch/searchd_rt.log
+  query_log = /var/lib/sphinxsearch/query_rt.log
+  binlog_path = /var/lib/sphinxsearch/data/rt_logs
   seamless_rotate = 1
-  preopen_indexes = 1
   unlink_old = 1
   workers = threads
 }
