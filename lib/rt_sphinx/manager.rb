@@ -3,11 +3,11 @@
 module RtSphinx
   class Manager
     def self.start
-      kill_daemon_if_needed
-      puts `searchd`
+      stop
+      puts `searchd --config ./sphinx.conf`
     end
 
-    def self.kill_daemon_if_needed
+    def self.stop
       `pid=$(lsof -i :9327 -t); if [ $pid ] ; then kill -TERM $pid || kill -KILL $pid; fi;`
       sleep(1)
     end
