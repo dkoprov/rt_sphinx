@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'rt_sphinx'
-  s.version     = '0.0.5'
+  s.version     = '0.0.6'
   s.platform    = Gem::Platform::RUBY
   s.license     = 'MIT'
   s.authors     = ['Dmitry Koprov']
